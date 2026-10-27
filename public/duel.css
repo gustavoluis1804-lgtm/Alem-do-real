@@ -1,0 +1,52 @@
+.duel-section{padding:66px 3.4vw 0;position:relative}
+.duel-section .section-pad-x{padding-inline:0}
+.duel-mask-defs{position:absolute;pointer-events:none}
+.photo-credit{font-size:.7rem;margin-top:20px;color:var(--muted)}
+.photo-credit a{text-decoration:underline;text-underline-offset:3px}
+.duel-section .section-topline{margin-bottom:54px;gap:25px}
+.duel-section .section-topline .eyebrow{font-size:clamp(.58rem,.76vw,.86rem);letter-spacing:0}
+.duel-heading-line{display:flex;align-items:center;gap:32px}
+.duel-chapters{display:flex;gap:5px}
+.duel-chapters i{display:block;width:48px;height:6px;background:var(--line);border-radius:9px;opacity:.65}
+.duel-chapters i:first-child{background:var(--lime);opacity:1}
+.duel-section .split-experience{display:flex;gap:0;align-items:stretch;isolation:isolate}
+.duel-card{position:relative;overflow:hidden;flex:none;min-width:0;height:clamp(470px,29vw,620px);border-radius:30px;isolation:isolate}
+.duel-card-left{width:54.3%;clip-path:url(#duel-left-mask);background:var(--bg);border:1px solid color-mix(in srgb,var(--line) 60%,transparent);z-index:2}
+.duel-card-right{width:55.7%;margin-left:-10%;clip-path:url(#duel-proof-mask);background:#11180f;color:#f6f6ee;z-index:1}
+.duel-portrait{position:absolute;inset:-1px -1px -1px 37%;clip-path:url(#duel-portrait-mask);background:var(--lime)}
+.duel-photo{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);transition:filter .65s;filter:saturate(.88)}
+.duel-portrait .duel-photo{object-position:50% 44%}
+.duel-photo-edge{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--lime);stroke-width:3;pointer-events:none}
+.duel-photo-edge path{vector-effect:non-scaling-stroke}
+.duel-left-copy{position:relative;width:47%;height:100%;padding:38px 0 30px 30px;z-index:1;display:flex;flex-direction:column;align-items:flex-start}
+.duel-kicker{color:var(--ink);font-size:clamp(.68rem,.98vw,1.15rem);font-weight:600;line-height:1.35;letter-spacing:-.025em}
+.duel-kicker:before{content:"";display:block;width:42px;height:2px;background:var(--lime);margin-bottom:14px}
+.duel-left-copy h2{font-size:clamp(3.6rem,6vw,7.5rem);font-style:italic;line-height:.87;letter-spacing:-.075em;margin:38px 0 20px;white-space:nowrap}
+.duel-left-copy h2 em,.duel-proof-copy h2 em{font-style:inherit}
+.duel-left-copy h2 em{color:var(--lime)}
+:root[data-theme=light] .duel-left-copy h2 em{color:#99bd00}
+.duel-description{max-width:330px;padding-right:22px;color:var(--ink);font-size:clamp(.68rem,.92vw,1rem);line-height:1.55;letter-spacing:-.025em}
+.duel-watch{border:0;background:transparent;display:flex;align-items:center;gap:15px;padding:0;margin-top:auto;text-transform:uppercase;font-size:clamp(.56rem,.72vw,.8rem);letter-spacing:.10em;font-weight:600;color:var(--ink);text-align:left}
+.duel-arrow{border:1px solid var(--lime);border-radius:50%;width:54px;height:54px;display:grid;place-items:center;font-size:1.7rem;transition:background .3s,transform .3s;color:var(--ink);flex:none}
+.duel-watch:hover .duel-arrow{background:var(--lime);color:#25291f;transform:rotate(8deg)}
+.duel-card-right>.duel-photo{position:absolute;inset:0;object-position:32% center;z-index:-2}
+.duel-train-shade{position:absolute;inset:0;background:linear-gradient(90deg,#0b140608 22%,#0b140622 43%,#0b1406cf 65%,#0b1406f2 100%);z-index:-1}
+.duel-proof-kicker{position:absolute;right:4%;top:34px;text-align:right;color:#f6f6ee;font-size:clamp(.66rem,.96vw,1.05rem);line-height:1.3;font-weight:600;letter-spacing:-.025em}
+.duel-proof-kicker:after{content:"";display:block;background:var(--lime);width:60px;height:2px;margin:14px 0 0 auto}
+.duel-proof-copy{position:absolute;right:3.7%;bottom:30px;width:35.5%;display:flex;align-items:flex-start;flex-direction:column;gap:20px}
+.duel-proof-copy h2{font-size:clamp(2.35rem,3.05vw,4.1rem);font-style:italic;line-height:.96;letter-spacing:-.065em;white-space:nowrap}
+.duel-proof-copy h2 em{display:inline-block;font-size:1.26em;color:var(--lime)}
+.duel-proof-copy p{font-size:clamp(.7rem,.98vw,1.05rem);line-height:1.45;color:#f2f4e8;letter-spacing:-.025em}
+.duel-verify{display:flex;align-items:center;justify-content:space-between;gap:24px;background:var(--lime);color:#17200b;border-radius:20px;padding:15px 24px;text-transform:uppercase;font-weight:600;font-size:clamp(.7rem,.95vw,1rem);min-height:50px;transition:background .3s,transform .3s}
+.duel-verify:hover{background:#e2ff57;transform:translateY(-3px)}
+.duel-section .duel-footer{padding-block:28px 10px;gap:24px}
+.duel-footer-note{display:flex;align-items:center;gap:16px}
+.duel-footer-note svg{width:29px;height:29px;flex:none}
+.duel-section .duel-footer p{font-size:clamp(.65rem,.86vw,.95rem);color:var(--ink)}
+.duel-section .duel-footer .text-link{text-transform:uppercase;letter-spacing:.02em;font-size:clamp(.72rem,1.05vw,1.15rem);gap:36px;text-decoration-color:var(--lime);text-underline-offset:10px;white-space:nowrap}
+@media(min-width:1700px){.duel-left-copy{padding:42px 0 34px 42px}.duel-left-copy h2{margin-top:50px}.duel-proof-copy{bottom:34px;gap:22px}.duel-proof-kicker{top:42px}}
+@media(max-width:1100px){.duel-section{padding:65px 3vw 0}.duel-chapters{display:none}.duel-card{height:490px}.duel-left-copy{width:48%;padding:30px 0 25px 22px}.duel-left-copy h2{font-size:5.7vw;margin-top:48px}.duel-proof-copy{width:37%;right:3.5%;gap:17px}.duel-proof-copy h2{font-size:3.15vw}.duel-proof-copy p{font-size:.74rem}.duel-verify{padding:13px 17px;gap:16px;border-radius:16px}.duel-arrow{width:43px;height:43px}.duel-watch{gap:10px;letter-spacing:.05em}.duel-section .section-topline{margin-bottom:35px}}
+@media(max-width:760px){.duel-section{padding:55px 20px 0}.duel-section .section-topline{align-items:center;gap:18px;margin-bottom:27px}.duel-section .section-topline .eyebrow{font-size:.49rem}.duel-section .section-topline>.eyebrow:last-child{max-width:95px}.duel-section .split-experience{display:grid;grid-template-columns:1fr;gap:18px}.duel-card-left,.duel-card-right{width:100%;margin:0;clip-path:none;border-radius:22px}.duel-card-left{height:490px}.duel-portrait{left:30%;clip-path:polygon(38% 0,100% 0,100% 100%,0 100%)}.duel-portrait .duel-photo{object-position:55% center}.duel-photo-edge{display:none}.duel-left-copy{padding:26px 0 28px 20px;width:55%}.duel-kicker{font-size:.65rem}.duel-left-copy h2{font-size:14vw;margin-top:60px;margin-bottom:23px}.duel-description{font-size:.68rem;max-width:160px;padding:8px 6px 8px 0;background:color-mix(in srgb,var(--bg) 86%,transparent);border-radius:0 12px 12px 0}.duel-watch{font-size:.52rem;gap:9px;letter-spacing:.04em}.duel-arrow{width:40px;height:40px}.duel-card-right{height:460px}.duel-card-right>.duel-photo{object-position:32% center}.duel-train-shade{background:linear-gradient(180deg,#08100505 0%,#08100515 27%,#081005e0 72%,#081005fa 100%)}.duel-proof-kicker{right:22px;top:26px;font-size:.65rem;text-shadow:0 1px 10px #000}.duel-proof-copy{right:22px;left:22px;bottom:25px;width:auto;gap:18px}.duel-proof-copy h2{font-size:10.8vw}.duel-proof-copy h2 br{display:none}.duel-proof-copy h2 em{display:block}.duel-proof-copy p{font-size:.76rem;max-width:300px}.duel-verify{font-size:.72rem;padding:14px 22px;min-height:48px;gap:32px}.duel-section .duel-footer{align-items:flex-start;gap:20px;padding-top:24px}.duel-footer-note{gap:12px}.duel-footer-note svg{width:24px;height:24px}.duel-section .duel-footer p{font-size:.61rem;max-width:260px}.duel-section .duel-footer .text-link{font-size:.72rem;gap:26px;align-self:flex-end}}
+@media(prefers-reduced-motion:reduce){.duel-photo{transform:none}}
+@media(max-width:760px){.duel-watch{width:max-content;min-height:44px;padding:2px 13px 2px 2px;border-radius:30px;background:color-mix(in srgb,var(--bg) 94%,transparent);font-size:.57rem;white-space:nowrap;flex-shrink:0}.duel-arrow{width:40px;height:40px}}
+@media print{.duel-section .split-experience{display:block}.duel-card{clip-path:none;height:auto;min-height:350px;width:100%;margin:0}.duel-card-right{color:black;background:white}.duel-proof-copy{position:relative;padding:30px;bottom:auto;right:auto;width:100%}.duel-left-copy{width:60%;padding:30px}.duel-portrait,.duel-train-shade,.duel-card-right>.duel-photo,.duel-proof-kicker{display:none}}

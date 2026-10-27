@@ -1,0 +1,13 @@
+.hero-title{left:7.2vw;right:7.2vw;font-size:clamp(7rem,15vw,18rem)}
+.hero-title .title-second{margin-left:12.8vw}
+.hero-scene.planet-scene{left:56%;top:calc(58% - min(39%,24vw));width:54%;height:min(78%,48vw);max-width:none;perspective:none;pointer-events:none}
+.hero-scene.planet-scene canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:auto;touch-action:pan-y;cursor:grab;outline-offset:-35px}
+.hero-scene.planet-scene canvas:active{cursor:grabbing}
+.planet-scene:after{content:"";position:absolute;left:29%;right:25%;bottom:5%;height:3%;background:radial-gradient(ellipse,#25291f26,transparent 70%);filter:blur(12px);z-index:-1;pointer-events:none}
+.planet-unavailable{position:absolute;left:20%;right:15%;top:45%;font-size:.8rem;text-align:center;color:var(--muted)}
+@media(min-width:1700px){.hero-scene.planet-scene{left:56%;width:54%;max-width:none;top:calc(58% - min(39%,24vw))}}
+@media(max-width:1100px){.hero-title{left:7vw;right:7vw;font-size:16vw}.hero-scene.planet-scene{left:52%;width:61%;top:22%;height:72%}}
+@media(max-width:760px){.hero-title{left:18px;right:18px;font-size:17vw;text-align:center}.hero-title .title-second{margin-left:0}.hero-scene.planet-scene{left:3%;width:94%;top:32%;height:52%}.hero-scene.planet-scene canvas{outline-offset:-16px}.planet-scene:after{bottom:9%;left:25%;right:25%}}
+@media(max-width:380px){.hero-scene.planet-scene{left:3%;width:94%;top:34%;height:49%}}
+@media(prefers-reduced-motion:reduce){.planet-scene{will-change:auto}}
+@media print{.hero-scene.planet-scene{display:none}}

@@ -1,0 +1,65 @@
+/* The opening is isolated from the site's scroll animations. */
+html.boot-loading{overflow-y:hidden}
+#bootScreen{
+  --boot-progress:0;--boot-fill:0%;
+  display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;
+  position:fixed;inset:0;z-index:1000;min-height:100svh;height:100dvh;
+  padding:32px 5.5vw 38px;overflow:hidden;isolation:isolate;
+  background:#151a13;color:#eff0e4;clip-path:none;opacity:1;visibility:visible;
+  transform:translateY(0);transition:transform .8s cubic-bezier(.76,0,.24,1);
+  animation:boot-watchdog 0s linear 5s forwards!important;
+}
+#bootScreen:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 48% 48%,#d2ff0008,transparent 64%)}
+#bootScreen.departing{transform:translateY(-101%);opacity:1;visibility:visible;clip-path:none;pointer-events:none}
+#bootScreen .boot-top{display:flex;align-items:center;justify-content:space-between;gap:24px;flex:none}
+#bootScreen .boot-kicker{font-size:.65rem;line-height:1.4;letter-spacing:.12em;font-weight:600;color:#abb59e}
+#bootScreen .boot-skip{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:44px;border:1px solid #47503e;border-radius:999px;padding:10px 18px;background:transparent;color:#eff0e4;font:600 .68rem/1.4 Inter,Arial,sans-serif;cursor:pointer;transition:background .2s,border-color .2s}
+#bootScreen .boot-skip>span:last-child{font-size:1.1rem}
+#bootScreen .boot-skip:hover{background:#293222;border-color:#a2b785}
+#bootScreen .boot-skip:focus-visible{outline:2px solid #d2ff00;outline-offset:4px}
+#bootScreen .boot-main{min-height:0;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 0}
+#bootScreen .boot-wordmark{width:max-content;max-width:100%;font-family:Inter,Arial,sans-serif;font-weight:800;letter-spacing:-.075em;user-select:none}
+#bootScreen .boot-name-line{display:flex;align-items:baseline;gap:.26em;font-size:clamp(2rem,min(12.5vw,18vh),11rem);line-height:.82}
+#bootScreen .boot-word{display:inline-flex;white-space:nowrap}
+#bootScreen .boot-letter-mask{display:inline-block;overflow:hidden;padding:.16em .035em .08em;margin-inline:-.025em;vertical-align:bottom}
+#bootScreen .boot-char{display:block;animation:boot-letter-in .85s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(var(--i)*55ms)}
+#bootScreen .boot-real-line{position:relative;width:max-content;font-size:clamp(4rem,min(23vw,31vh),21rem);line-height:.8}
+#bootScreen .boot-real-outline{color:transparent;-webkit-text-stroke:1px #9eaa91}
+#bootScreen .boot-real-fill{position:absolute;inset:0;color:#d2ff00;clip-path:inset(calc(100% - var(--boot-fill)) 0 0 0)}
+#bootScreen .boot-signature{font:500 .62rem/1.5 Inter,Arial,sans-serif;letter-spacing:.25em;color:#aab49e;margin:26px 0 0;text-align:center;animation:boot-signature-in .7s 1s both}
+#bootScreen .boot-loading{width:100%;flex:none}
+#bootScreen .boot-loading-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:18px}
+#bootScreen #boot-status{font:500 .65rem/1.5 Inter,Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#aab49e;margin:0 0 6px}
+#bootScreen .boot-counter{display:flex;align-items:baseline;gap:5px;font-size:clamp(2.25rem,4vw,4rem);font-weight:800;line-height:1;letter-spacing:-.065em;color:#eff0e4}
+#bootScreen #boot-count{font-variant-numeric:tabular-nums;font-feature-settings:"tnum";min-width:3ch;text-align:right}
+#bootScreen .boot-counter small{font-size:.36em;color:#d2ff00;letter-spacing:0}
+#bootScreen .boot-track{height:2px;width:100%;background:#47503e;margin:0;border-radius:0;overflow:hidden}
+#bootScreen #boot-progress{display:block;width:100%;height:100%;background:#d2ff00;transform:scaleX(var(--boot-progress));transform-origin:left;transition:none}
+@keyframes boot-letter-in{from{transform:translateY(115%) rotate(6deg);opacity:0;filter:blur(7px)}to{transform:translateY(0) rotate(0);opacity:1;filter:blur(0)}}
+@keyframes boot-signature-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes boot-watchdog{to{opacity:0;visibility:hidden;pointer-events:none}}
+@media(max-width:760px){
+  #bootScreen{padding:24px 6vw 30px}
+  #bootScreen .boot-kicker{font-size:.53rem;letter-spacing:.07em;max-width:140px}
+  #bootScreen .boot-skip{font-size:.6rem;padding:9px 13px;gap:12px}
+  #bootScreen .boot-name-line{font-size:17vw}
+  #bootScreen .boot-real-line{font-size:31vw}
+  #bootScreen .boot-signature{font-size:.48rem;letter-spacing:.15em;margin-top:20px}
+  #bootScreen #boot-status{font-size:.55rem;max-width:190px}
+  #bootScreen .boot-loading-row{gap:15px;margin-bottom:16px}
+}
+@media(max-height:540px){
+  #bootScreen{padding:18px 4vw 22px}
+  #bootScreen .boot-main{padding:12px 0}
+  #bootScreen .boot-name-line{font-size:min(12.5vw,15vh)}
+  #bootScreen .boot-real-line{font-size:min(23vw,27vh)}
+  #bootScreen .boot-signature{margin-top:12px;font-size:.5rem}
+  #bootScreen .boot-counter{font-size:2.1rem}
+}
+@media(prefers-reduced-motion:reduce){
+  #bootScreen{transition:none}
+  #bootScreen .boot-char,#bootScreen .boot-signature{animation:none;transform:none;filter:none;opacity:1}
+}
+.motion-paused #bootScreen{transition:none}
+.motion-paused #bootScreen .boot-char,.motion-paused #bootScreen .boot-signature{animation:none;transform:none;filter:none;opacity:1}
+@media print{#bootScreen{display:none!important}}

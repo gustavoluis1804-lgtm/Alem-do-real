@@ -1,0 +1,40 @@
+/* The group's video example, styled from the supplied visual reference. */
+.lab-section-bridge{height:clamp(36px,4.8vw,76px);background:#111310;overflow:hidden;pointer-events:none}
+.lab-section-bridge svg{display:block;width:100%;height:calc(100% + 1px);fill:#f8f7f1}
+#laboratorio{--ink:#0c0e0b;--muted:#5c6155;--lime:#d2ff00;position:relative;isolation:isolate;overflow:visible;padding:clamp(54px,4.5vw,80px) 8.4vw 96px;background:linear-gradient(180deg,#f8f7f1 0%,#f5f5ec 64%,#f3f1e5 92%,#f3f1e5 100%);color:var(--ink)}
+#laboratorio .lab-scenery{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;mask-image:linear-gradient(#000 0%,#000 60%,transparent 100%);-webkit-mask-image:linear-gradient(#000 0%,#000 60%,transparent 100%)}
+#laboratorio .lab-scenery svg{display:block;width:100%;height:100%}
+#laboratorio .lab-lime-corner{fill:#d2ff00}
+#laboratorio .lab-dark-corner{fill:#303916}
+#laboratorio .lab-paper-curve{fill:none;stroke:#fff;stroke-width:3;opacity:.8}
+#laboratorio .section-topline{position:relative;display:block;margin-bottom:clamp(36px,3.2vw,54px)}
+#laboratorio .section-topline .eyebrow{font-size:clamp(.65rem,.95vw,.9rem);line-height:1.4;letter-spacing:-.015em;color:#11140e;max-width:none;text-align:left;white-space:nowrap}
+#laboratorio .lab-heading{display:block;margin:0 0 clamp(30px,2.8vw,48px);position:relative}
+#laboratorio .lab-heading h2{font-family:Inter,Arial,sans-serif;font-weight:800;font-style:italic;font-size:clamp(3.3rem,6.4vw,7.8rem);line-height:.96;letter-spacing:-.065em;color:#080a07;max-width:1400px;margin:0;padding:.08em .12em .04em 0}
+#laboratorio .lab-heading h2>span,#laboratorio .lab-heading h2>em{display:block;white-space:nowrap}
+#laboratorio .lab-heading h2>em{font:inherit;color:#86b300;background:linear-gradient(180deg,#99c500,#7daa00);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;padding:.08em 0 .02em;margin-top:-.035em;letter-spacing:-.065em}
+#laboratorio .video-showcase{position:relative;width:78%;max-width:1100px;margin:0 auto}
+#laboratorio .lab-video-frame{border:3px solid #d2ff00;border-radius:clamp(22px,2.7vw,44px);overflow:hidden;background:#0b100a;color:#fff;box-shadow:0 18px 38px #94b60024,0 0 24px #d2ff0030;transform-origin:center top}
+#laboratorio .player-wrap{overflow:hidden;border:0;border-radius:0;background:#0b100a;transform-origin:center top}
+#laboratorio .player-wrap video{width:100%;height:auto;aspect-ratio:7/4;max-height:none;object-fit:contain;object-position:center;background:#0b100a;accent-color:#d2ff00;color-scheme:dark}
+#laboratorio .player-wrap video:fullscreen{width:100%;height:100%;aspect-ratio:auto;object-fit:contain}
+#laboratorio .video-caption{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:18px}
+#laboratorio .video-caption p{font-size:.65rem;line-height:1.5;color:#5c6155;max-width:none}
+#laboratorio .video-caption a{font-size:.65rem;line-height:1.5;color:#353e27;gap:12px;min-height:36px;padding:6px 0}
+@media(max-width:1000px){#laboratorio .video-showcase{width:86%}}
+@media(max-width:760px){
+ #laboratorio{padding:54px 7vw 76px}
+ #laboratorio .section-topline{margin-bottom:36px}
+ #laboratorio .section-topline .eyebrow{font-size:.56rem}
+ #laboratorio .lab-heading{margin-bottom:30px}
+ #laboratorio .lab-heading h2{font-size:8.5vw;line-height:1;letter-spacing:-.07em}
+ #laboratorio .lab-heading h2>em{margin-top:.08em}
+ #laboratorio .video-showcase{width:100%}
+ #laboratorio .lab-video-frame{border-width:2px;border-radius:20px}
+ #laboratorio .player-wrap video{aspect-ratio:7/4}
+ #laboratorio .video-caption{gap:12px;padding-top:14px;align-items:flex-start}
+ #laboratorio .video-caption p,#laboratorio .video-caption a{font-size:.56rem}
+ #laboratorio .video-caption p{max-width:60%;padding-top:6px}
+ #laboratorio .lab-paper-curve{stroke-width:2}
+}
+@media print{.lab-section-bridge{display:none}#laboratorio{padding:40px 20px;background:#fff}#laboratorio .lab-scenery{display:none}#laboratorio .lab-heading h2{font-size:3rem!important}#laboratorio .lab-heading h2>em{-webkit-text-fill-color:#7daa00;background:none}#laboratorio .video-showcase{width:80%}#laboratorio .lab-video-frame{transform:none!important}}

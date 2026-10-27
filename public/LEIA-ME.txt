@@ -1,0 +1,18 @@
+ALÉM DO REAL — GRUPO 3
+
+VERSÃO ATUAL DO SITE
+
+Para abrir: extraia todo o ZIP e abra o index.html da raiz do projeto.
+Também é possível abrir este public/index.html diretamente.
+Para publicar apenas o site estático, use todo o conteúdo desta pasta public.
+Mantenha assets e videos nos mesmos locais.
+
+Inclui a abertura animada, o planeta 3D, a galeria horizontal, as nove rodadas do desafio com 18 vídeos, o vídeo original do grupo e as seis frases animadas de Antes de compartilhar.
+As transições do vídeo e o rodapé estão corrigidos. Os textos e as legendas decorativas soltas foram retirados; títulos, instruções, créditos e controles foram preservados.
+
+Temas, conforto de leitura e pausa de animações estão no menu.
+As posições A/B mudam a cada participação; os créditos aparecem depois do voto.
+As respostas seguem a origem documentada e não um detector automático de IA.
+
+O código-fonte completo e as instruções de edição estão na raiz do projeto, em README.md.
+As referências estão em CREDITOS-VIDEOS.md e CREDITOS-FOTOS.md.

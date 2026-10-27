@@ -1,0 +1,37 @@
+/* One continuous paper surface; photographs can pass across the section boundary. */
+.manifesto{--ink:#20261c;--muted:#4b5044;background:#f3f1e5;color:#20261c;min-height:0;padding-top:clamp(100px,10vw,150px);padding-bottom:clamp(70px,7vw,110px)}
+.perception-section{position:relative;isolation:isolate;container-type:inline-size;height:clamp(1180px,125vw,1800px);min-height:0;aspect-ratio:auto;background:#f3f1e5;color:#20261c;overflow:visible;z-index:1}
+.perception-section:before{content:none}
+.perception-section .perception-title-track{position:absolute;top:22%;bottom:23%;left:10%;right:10%;z-index:2;pointer-events:none}
+.perception-section .perception-backdrop{position:absolute;top:0;left:0;right:0;padding:0;text-align:center;z-index:2;opacity:1;transform:none}
+.perception-scroll-motion .perception-backdrop{position:sticky;top:22vh;left:auto;right:auto;will-change:transform,opacity}
+.perception-section .perception-backdrop .eyebrow{font-size:1.38cqw;font-weight:600;letter-spacing:.31em;line-height:1.5;margin:0 0 2.65cqw;color:#25291f}
+.perception-section .perception-backdrop h2{font-family:Inter,Arial,sans-serif;font-size:clamp(4rem,18.45cqw,15rem);font-weight:800;line-height:.79;letter-spacing:-.085em;margin:0;color:#20261c}
+.perception-section .perception-backdrop h2>span{display:block;transform:scaleX(.93)}
+.perception-section .perception-backdrop h2 em{display:block;font-family:inherit;font-size:.94em;font-weight:800;letter-spacing:-.075em;line-height:.84;font-style:normal;color:#f3f1e5;-webkit-text-stroke:0;text-shadow:.15cqw 0 #30352a,-.15cqw 0 #30352a,0 .15cqw #30352a,0 -.15cqw #30352a,.1cqw .1cqw #30352a,-.1cqw -.1cqw #30352a,.1cqw -.1cqw #30352a,-.1cqw .1cqw #30352a;margin-top:0}
+.perception-section .perception-backdrop p{font-size:2.02cqw;line-height:1.4;color:#4b5044;max-width:none;white-space:nowrap;margin:1.65cqw -2cqw 0;letter-spacing:-.035em}
+.perception-section .photo-wall{position:absolute;inset:0;z-index:1;pointer-events:none}
+.perception-section .wall-photo{position:absolute;margin:0;padding:0;z-index:1;transform:none;filter:none;width:var(--photo-w);height:calc(var(--photo-w)*.625)}
+.perception-section .wall-photo-motion{position:relative;width:100%;height:100%;transform:none;transform-origin:center}
+.perception-scroll-motion .wall-photo-motion{will-change:transform}
+.perception-section .photo-mat{width:100%;height:100%;position:relative;background:#faf9f1;border:2px solid #faf9f1;border-radius:12px;box-shadow:0 14px 35px #25291f26;overflow:hidden;transform:none}
+.perception-section .photo-mat img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;box-shadow:none;transform-origin:center;will-change:transform}
+.perception-section .wall-photo figcaption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.perception-section .photo-1{--photo-w:clamp(180px,25cqw,430px);left:7%;top:5%;right:auto}
+.perception-section .photo-2{--photo-w:clamp(160px,21cqw,360px);left:auto;right:8%;top:8%}
+.perception-section .photo-3{--photo-w:clamp(180px,24cqw,410px);left:auto;right:3%;top:39%;z-index:3}
+.perception-section .photo-4{--photo-w:clamp(180px,25cqw,430px);left:6%;top:53%;right:auto}
+.perception-section .photo-5{--photo-w:clamp(170px,22cqw,380px);left:auto;right:15%;top:69%}
+.perception-section .photo-6{--photo-w:clamp(180px,25cqw,430px);left:3%;top:81%;right:auto}
+.perception-section .wall-photo .photo-mat img{object-position:center}
+.perception-section .perception-caption{position:absolute;left:45.95%;right:4.5%;top:83%;bottom:auto;display:flex;flex-direction:column;align-items:flex-start;gap:0;z-index:4;color:#20261c}
+.perception-section .perception-caption p{font-size:clamp(1.25rem,4cqw,3.2rem);font-weight:600;letter-spacing:-.055em;line-height:1.04;color:#17271a;margin:0 -1cqw 0 0;white-space:nowrap}
+.perception-section .perception-cta{display:flex;align-items:center;gap:2.4cqw;min-height:5cqw;margin-top:2.3cqw;color:#3f4639;font-size:1.38cqw;font-weight:500;line-height:1.4;letter-spacing:.29em;text-transform:uppercase;white-space:nowrap}
+.perception-section .perception-cta>span:last-child{font-size:4cqw;line-height:1;letter-spacing:0;transition:transform .25s}
+.perception-section .perception-cta:hover>span:last-child{transform:translateX(.7cqw)}
+.perception-section .perception-cta:focus-visible{outline-color:#526000;outline-offset:5px}
+@media(max-width:760px){.manifesto{padding:84px 22px 64px}.perception-section{height:980px}.perception-section .photo-1,.perception-section .photo-4,.perception-section .photo-6{--photo-w:clamp(120px,38cqw,190px)}.perception-section .photo-2,.perception-section .photo-5{--photo-w:clamp(112px,34cqw,175px)}.perception-section .photo-3{--photo-w:clamp(120px,36cqw,185px)}}
+@media(max-width:500px){.perception-section .perception-backdrop .eyebrow{font-size:1.5cqw;letter-spacing:.24em}.perception-section .perception-backdrop p{font-size:2.3cqw}.perception-section .perception-cta{min-height:44px;font-size:1.42cqw;gap:1.9cqw;margin-top:0}.perception-section .photo-mat{border-width:1px;border-radius:7px}}
+@media(prefers-reduced-motion:reduce){.perception-section .photo-mat img{will-change:auto}}
+.motion-paused .perception-section .photo-mat img{will-change:auto}
+@media print{.perception-section{break-inside:avoid;print-color-adjust:exact}.perception-scroll-motion .perception-backdrop{position:absolute;top:0;will-change:auto}}
